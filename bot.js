@@ -6,7 +6,7 @@ let prefix = "c!";
 
 client.on('ready', () => {
     console.log('I am ready!');
-	client.user.setGame("use c!help !);
+	client.user.setGame("use c!help !");
 });
 
 client.on('message', message => {
