@@ -26,7 +26,6 @@ client.on('message', message => {
         
       
         if(message.content.startsWith(prefix + "play")){
-		console.log("recieved");
 			if(!message.member.voiceChannel){return message.channel.send("please connect to a voice channel")};
 		
 			if(message.guild.me.voiceChannel){return message.channel.send("Sorry the bot is already connected to the guild.")};
@@ -44,7 +43,7 @@ client.on('message', message => {
     			channel.join()
    			.then(connection => {const dispatcher = connection.playStream(stream, streamOptions);})
 			
-			let info = getInfo(args[0]);
+			let info = ytdl.getInfo(args[0]);
 				    
 			message.channel.send('Now playing: ' + info.title);
 	};
