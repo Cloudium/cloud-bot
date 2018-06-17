@@ -45,11 +45,7 @@ client.on('message', message => {
 			let stream = ytdl(args[0], {filter: "audioonly"});
 		
     			channel.join()
-   			.then(connection => 
-	        		console.log('Connected!');     				
-				let dispatcher = connection.playStream(stream, streamOptions);
-			)
-    			.catch(console.error);
+   			.then(connection => {const dispatcher = connection.playStream(stream, streamOptions);})
 		
 		message.channel.send("Now playing: ${info.title}");
 	};
