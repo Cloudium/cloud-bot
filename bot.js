@@ -38,7 +38,7 @@ client.on('message', message => {
 		
 			if(!validate){return message.channel.send("sorry please put a **valid** url following the command")};
 			
-			let info = ytdl.getInfo(args[0]);
+			let info = getInfo(args[0]);
 		
 			let channel = message.member.voiceChannel
 			
@@ -47,7 +47,6 @@ client.on('message', message => {
     			channel.join()
    			.then(connection => {const dispatcher = connection.playStream(stream, streamOptions);})
 		
-			let info = getInfo(args[0])
 		message.channel.send('Now playing: ' + info.title);
 	};
 	
