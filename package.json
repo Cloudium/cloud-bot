@@ -3,7 +3,7 @@
   "description": "Official CloudBot",
   "version": "0.1.0",
   "engines":{
-    "npm": "8.11.3"
+    "npm": "5.6.x"
   },
   "main": "bot.js",
   "scripts": {
