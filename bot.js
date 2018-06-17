@@ -26,7 +26,7 @@ client.on('message', message => {
         if(message.content.startsWith(prefix + "play")){
 		console.log("recieved");
 		message.channel.send("processing request");
-			if(!message.member.voiceChannel){return message.channel.Send("please connect to a voice channel")};
+			if(!message.member.voiceChannel){return message.channel.send("please connect to a voice channel")};
 		
 			if(message.guild.me.voiceChannel){return message.channel.send("Sorry the bot is already connected to the guild.")};
 		
