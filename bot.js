@@ -24,7 +24,7 @@ client.on('message', message => {
         
       
         if(message.content.startsWith == prefix + "play"){
-	exports.run = async (client, message, args, ops) =>{
+	exports.run = async (client, message, args) =>{
 		if(!message.member.voiceChannel){return message.channel.Send("please connect to a voice channel")};
 		
 		if(message.guild.me.voiceChannel){return message.channel.send("Sorry the bot is already connected to the guild.")};
