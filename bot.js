@@ -10,6 +10,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+	
+	let args = message.content.slice(prefix.length).trim().split("c!");
     
     
     if (message.content.startsWith = prefix){
