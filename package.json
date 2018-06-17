@@ -2,9 +2,9 @@
   "name": "CloudBot",
   "description": "Official CloudBot",
   "version": "0.1.0",
-  "engines":{
-    "npm": "8.x"
-  },
+ // "engines":{
+ //    "npm": "8.x"
+ //},
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
