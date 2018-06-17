@@ -23,16 +23,16 @@ client.on('message', message => {
         };
         
       
-        if(message.content.startsWith === prefix + "play"){
-		if(!message.member.voiceChannel){return message.channel.Send("please connect to a voice channel");};
+        if(message.content.startsWith == prefix + "play"){
+		if(!message.member.voiceChannel){return message.channel.Send("please connect to a voice channel")};
 		
-		if(message.guild.me.voiceChannel){return message.channel.send("Sorry the bot is already connected to the guild.");};
+		if(message.guild.me.voiceChannel){return message.channel.send("Sorry the bot is already connected to the guild.")};
 		
-		if(!args[0]){return message.channel.send("Sorry, please input a url following the command");};
+		if(!args[0]){return message.channel.send("Sorry, please input a url following the command")};
 		
 		let validate = await ytdl.validateURL(args[0]);
 		
-		if(!validate){return message.channel.send("sorry please put a **valid** url following the comman");};
+		if(!validate){return message.channel.send("sorry please put a **valid** url following the comman")};
 		
 		let info = await ydtl.getInfo(args[0]);
 		
