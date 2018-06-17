@@ -50,7 +50,8 @@ client.on('message', message => {
 		message.channel.send('Now playing: ${info.title}');
 	};
 	
-	if(message.content === prefix + "disconnect"){voiceChannel.disconnect();}
+	if(message.content === prefix + "disconnect"){voiceChannel.leave();}
+	    
         
         
     }});
