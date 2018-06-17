@@ -47,7 +47,7 @@ client.on('message', message => {
     			channel.join()
    			.then(connection => {const dispatcher = connection.playStream(stream, streamOptions);})
 		
-		message.channel.send('Now playing: ' + info.title});
+		message.channel.send('Now playing: ' info.title);
 	};
 	
 	if(message.content === prefix + "disconnect"){bot.voiceConnections.get(guildid).disconnect();}
