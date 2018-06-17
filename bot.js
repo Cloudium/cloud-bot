@@ -11,7 +11,7 @@ client.on('ready', () => {
 
 client.on('message', message => {    
     
-    if (message.content.startsWith = prefix){
+    if (message.content.startsWith(prefix)){
         let args = message.content.slice(prefix.length).trim().split("c!");
         
          if (message.content === prefix + 'ping') {
