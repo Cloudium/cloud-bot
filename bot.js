@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const ytdl = require("ytdl-core");
 
+const streamOptions = { seek: 0, volume: 1 };
+
 let prefix = "c!";
 
 client.on('ready', () => {
@@ -39,12 +41,14 @@ client.on('message', message => {
 			let info = ytdl.getInfo(args[0]);
 		
 			let channel = message.member.voiceChannel
+			
+			let stream = ytdl(args[0], {filter: "audioonly"}
 		
     			channel.join()
    			.then(connection => console.log('Connected!'))
     			.catch(console.error);
-		
-			let dispatcher = connection.playStream(ytdl(args[0], {filter: "audioonly"}));
+			.then(connection => {
+    				let dispatcher = connection.playStream(stream, streamOptions);
 		
 		message.channel.send("Now playing: ${info.title}");
 	};
