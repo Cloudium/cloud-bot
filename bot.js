@@ -24,6 +24,7 @@ client.on('message', message => {
         
       
         if(message.content.startsWith == prefix + "play"){
+	exports.run = async (client, message, args, ops) =>{
 		if(!message.member.voiceChannel){return message.channel.Send("please connect to a voice channel")};
 		
 		if(message.guild.me.voiceChannel){return message.channel.send("Sorry the bot is already connected to the guild.")};
@@ -41,7 +42,7 @@ client.on('message', message => {
 		let dispatcher = await connection.play(ytdl(args[0], {filter: "audioonly"}));
 		
 		message.channel.send("Now playing: ${info.title}");
-	};
+	}};
         
         
     }});
