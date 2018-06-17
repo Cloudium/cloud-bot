@@ -40,7 +40,7 @@ client.on('message', message => {
 		
 			let connection = message.member.voiceChannel.join();
 		
-			let dispatcher = connection.play(ytdl(args[0], {filter: "audioonly"}));
+			let dispatcher = connection.playStream(ytdl(args[0], {filter: "audioonly"}));
 		
 		message.channel.send("Now playing: ${info.title}");
 	};
