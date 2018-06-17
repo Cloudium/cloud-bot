@@ -44,7 +44,7 @@ client.on('message', message => {
     			channel.join()
    			.then(connection => {const dispatcher = connection.playStream(stream, streamOptions);})
 			
-			function fgetInfo(a){return ytdl.getInfo(a))};
+			function fgetInfo(a){return ytdl.getInfo(a)};
 		
 			function stitle2var(info){return info.title};	
 		
