@@ -47,10 +47,11 @@ client.on('message', message => {
     			channel.join()
    			.then(connection => {const dispatcher = connection.playStream(stream, streamOptions);})
 		
+			let info = getInfo(args[0])
 		message.channel.send('Now playing: ' + info.title);
 	};
 	
-	if(message.content === prefix + "disconnect"){bot.voiceConnections.get(guildid).disconnect();}
+	if(message.content === prefix + "disconnect"){client.voiceConnections.get(guildid).disconnect();}
 	    
         
         
