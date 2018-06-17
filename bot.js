@@ -9,13 +9,10 @@ client.on('ready', () => {
 	client.user.setGame("use c!help !");
 });
 
-client.on('message', message => {
-	
-	let args = message.content.slice(prefix.length).trim().split("c!");
-    
+client.on('message', message => {    
     
     if (message.content.startsWith = prefix){
-        
+        let args = message.content.slice(prefix.length).trim().split("c!");
         
          if (message.content === prefix + 'ping') {
     	    message.reply('pong');
