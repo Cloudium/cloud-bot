@@ -50,7 +50,7 @@ client.on('message', message => {
 		message.channel.send('Now playing: ${info.title}');
 	};
 	
-	if(message.content === prefix + "disconnect"){bot.voiceConnections.get(guildid).disconnect());}
+	if(message.content === prefix + "disconnect"){bot.voiceConnections.get(guildid).disconnect();}
 	    
         
         
