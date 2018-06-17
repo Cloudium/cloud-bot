@@ -44,10 +44,10 @@ client.on('message', message => {
     			channel.join()
    			.then(connection => {const dispatcher = connection.playStream(stream, streamOptions);})
 			
-			var info = ytdl.getInfo(args[0]);
+			let info = ytdl.getInfo(args[0]);
 	
 		
-			console.log(info);
+			console.log(ytdl.getInfo(args[0]));
 		
 			message.channel.send('Now playing: ' + info.title);
 	};
