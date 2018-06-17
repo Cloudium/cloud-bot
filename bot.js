@@ -48,7 +48,7 @@ client.on('message', message => {
 		
 			function stitle2var(info){return info.title};	
 		
-			console.log(stitle2var(fgetInfo(args[0]));
+			console.log(stitle2var(fgetInfo(args[0])));
 				    
 			message.channel.send('Now playing: ' + info.title);
 	};
