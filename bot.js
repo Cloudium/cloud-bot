@@ -42,7 +42,7 @@ client.on('message', message => {
 		
 			let channel = message.member.voiceChannel
 			
-			let stream = ytdl(args[0], {filter: "audioonly"}
+			let stream = ytdl(args[0], {filter: "audioonly"});
 		
     			channel.join()
    			.then(connection => console.log('Connected!'))
