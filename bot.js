@@ -27,7 +27,6 @@ client.on('message', message => {
       
         if(message.content.startsWith(prefix + "play")){
 		console.log("recieved");
-		message.channel.send("processing request");
 			if(!message.member.voiceChannel){return message.channel.send("please connect to a voice channel")};
 		
 			if(message.guild.me.voiceChannel){return message.channel.send("Sorry the bot is already connected to the guild.")};
@@ -46,8 +45,10 @@ client.on('message', message => {
 		
     			channel.join()
    			.then(connection => {const dispatcher = connection.playStream(stream, streamOptions);})
+			
+			console.log(info);
 		
-		message.channel.send('Now playing: ' + info.title);
+			message.channel.send('Now playing: ' + info.title);
 	};
 	
 	if(message.content === prefix + "disconnect"){client.voiceConnections.get(message.guild.id).disconnect();}
