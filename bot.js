@@ -34,7 +34,7 @@ client.on('message', message => {
 		
 			let validate = ytdl.validateURL(args[0]);
 		
-			if(!validate){return message.channel.send("sorry please put a **valid** url following the comman")};
+			if(!validate){return message.channel.send("sorry please put a **valid** url following the command")};
 			
 			let info = ydtl.getInfo(args[0]);
 		
