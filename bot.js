@@ -38,7 +38,7 @@ client.on('message', message => {
 		
 			if(!validate){return message.channel.send("sorry please put a **valid** url following the command")};
 			
-			let info = getInfo(args[0]);
+			let info = ytdl.getInfo(args[0]);
 		
 			let channel = message.member.voiceChannel
 			
