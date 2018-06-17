@@ -23,7 +23,7 @@ client.on('message', message => {
         };
         
       
-        if(message.content.startsWith == prefix + "play"){
+        if(message.content.startsWith(prefix + "play")){
 	exports.run = async (client, message, args) =>{
 		console.log("recieved");
 		if(!message.member.voiceChannel){return message.channel.Send("please connect to a voice channel")};
