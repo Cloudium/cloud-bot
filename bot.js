@@ -38,7 +38,9 @@ client.on('message', message => {
 			
 			let info = ytdl.getInfo(args[0]);
 		
-			let connection = voiceChannel.join();
+			let channel = message.author.voiceChannel
+		
+			let connection = channel.join();
 		
 			let dispatcher = connection.playStream(ytdl(args[0], {filter: "audioonly"}));
 		
